@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/20161218" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161219" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161220" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161221" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161222" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161223" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161228" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161229" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161230" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20161231" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20170106" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/20170112" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="myclass" level="project" />
+  </component>
+</module>
