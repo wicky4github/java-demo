@@ -1,0 +1,5 @@
+student[name: ooo, math: 12, chinese: 323, english: 345]	sum: 680
+student[name: qwe, math: 123, chinese: 435, english: 3]	sum: 561
+student[name: wicky, math: 123, chinese: 21, english: 33]	sum: 177
+student[name: mary, math: 12, chinese: 3, english: 213]	sum: 228
+student[name: jack, math: 12, chinese: 3, english: 12]	sum: 27
