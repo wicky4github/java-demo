@@ -163,14 +163,16 @@ class MapPanel extends JPanel implements KeyListener, Runnable {
     Vector<Enemy> killedEnemies = new Vector<Enemy>();  // 击杀的所有敌人样本
     ArrayList<Image> imgs = new ArrayList<Image>();     // 爆炸的图片资源
     Vector<Bomb> bombs = new Vector<Bomb>();            // 地图上可能产生的炸弹
+    Vector<Point> points;  // 敌人的初始坐标（存盘读入）
     MapPanel(Vector<Point> points){
+        this.points = points;
         // 播放声音
         Sound sound = new Sound("res/bgm.wav");
         sound.start();
         //创建主人公
         createHero();
         //创建敌人
-        createEnemies(points);
+        createEnemies();
         // 创建样本坦克，提示信息（不参与战斗）
         createSample();
         // 把所有敌人坦克存储到对象中，用来判断是否与其他的坦克碰撞
@@ -185,7 +187,7 @@ class MapPanel extends JPanel implements KeyListener, Runnable {
     public void createHero(){
         hero = new Hero(MapPanel.MAP_WIDTH / 2, MapPanel.MAP_HEIGHT - 30/2);
     }
-    public void createEnemies(Vector<Point> points){
+    public void createEnemies(){
         int enemiesNum = Recorder.getEnemiesNum();
         if (points != null && points.size() != 0) {
             enemiesNum = points.size();
@@ -239,10 +241,14 @@ class MapPanel extends JPanel implements KeyListener, Runnable {
         drawTank(g, sampleHero);
         g.setColor(Color.black);
         g.drawString(Recorder.getMyLife()+"", sampleHero.x+20, sampleHero.y+5);
+        int num = Recorder.getEnemiesNum();
+        if (points != null && points.size() != 0) {
+            num = points.size();
+        }
         for (int s = 0; s < sampleEnemies.size(); s++) {
             Enemy enemy = sampleEnemies.get(s);
             drawTank(g, enemy);
-            g.drawString(Recorder.getEnemiesNum()+"", enemy.x+20, enemy.y+5);
+            g.drawString(num+"", enemy.x+20, enemy.y+5);
         }
         // 画出击杀敌人总数
         for (int i = 0; i < killedEnemies.size(); i++) {
