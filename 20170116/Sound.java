@@ -15,7 +15,7 @@ class Sound extends Thread{
         File soundFile = new File(filename);
         AudioInputStream audioInputStream = null;     // 音频输入流
         try{
-            new AudioInputStream(soundFile);
+            audioInputStream = AudioSystem.getAudioInputStream(soundFile);  // 通过文件获取音频输入流
         }catch(Exception e){
             e.printStackTrace();
             return;
